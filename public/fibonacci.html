@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Fibonacci</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+  </head>
+
+  <body>
+    <h1>Fibonacci number</h1>
+    <p>
+      Write a function that calculates the nth Fibonacci number in O(n) time or
+      better without using any "for" or "while" loops.
+    </p>
+    <pre><code class="python" contentEditable="true">def fib(N: int) -> int:
+    memo = {}
+    def helper(n):
+        if n in memo:
+            return memo[n]
+        if n <= 1:
+            return n
+        res = helper(n-1) + helper(n-2)
+        memo[n] = res
+        return res
+    return helper(N-1)
+
+n = 5 #Feel free to modify the input value of n
+print(fib(n))</code></pre>
+
+    <input type="button" value="Run" id="run" />
+    <div class="loader"></div>
+    <h3 id="result"></h3>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="javascripts/fibonacci.js"></script>
+  </body>
+</html>

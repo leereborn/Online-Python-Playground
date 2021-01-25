@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Merge Lists</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+  </head>
+
+  <body>
+    <h1>Merge Lists</h1>
+    <p>
+      Write an immutable function that merges the following inputs into a single
+      list.
+    </p>
+
+    <pre><code class="python" contentEditable="true">
+def merge(l_origin, l_add, l_del):
+    res_set = set(l_origin)
+    res_set.update(l_add)
+    res_set.difference_update(l_del)
+
+    res_list = list(res_set)
+    res_list.sort(reverse=True)
+    res_list.sort(key = lambda x: len(x), reverse=True)
+
+    return res_list
+
+#Feel free to modify the input lists below
+original_list = ['one', 'two', 'three']
+add_list = ['one', 'two', 'five', 'six']
+delete_list = ['two', 'five']
+print(merge(original_list, add_list, delete_list))</code></pre>
+
+    <input type="button" value="Run" id="run" />
+    <div class="loader"></div>
+    <h3 id="result"></h3>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="javascripts/fibonacci.js"></script>
+  </body>
+</html>
