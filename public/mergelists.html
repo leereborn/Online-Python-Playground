@@ -1,15 +1,7 @@
 <html>
   <head>
     <title>Merge Lists</title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-    <link
-      rel="stylesheet"
-      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css"
-    />
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-    <script>
-      hljs.initHighlightingOnLoad();
-    </script>
+    <link rel="stylesheet" href="stylesheets/style.css" />
   </head>
 
   <body>
@@ -19,7 +11,15 @@
       list.
     </p>
 
-    <pre><code class="python" contentEditable="true">
+    <textarea
+      id="code"
+      autocorrect="off"
+      autocapitalize="off"
+      spellcheck="false"
+      style="height: 40%; width: 95%"
+      autocomplete="off"
+      autofocus
+    >
 def merge(l_origin, l_add, l_del):
     res_set = set(l_origin)
     res_set.update(l_add)
@@ -35,8 +35,10 @@ def merge(l_origin, l_add, l_del):
 original_list = ['one', 'two', 'three']
 add_list = ['one', 'two', 'five', 'six']
 delete_list = ['two', 'five']
-print(merge(original_list, add_list, delete_list))</code></pre>
-
+print(merge(original_list, add_list, delete_list))</textarea
+    >
+    <br />
+    <br />
     <input type="button" value="Run" id="run" />
     <div class="loader"></div>
     <h3 id="result"></h3>

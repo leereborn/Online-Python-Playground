@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Python Playground</title>
+    <link rel="stylesheet" href="stylesheets/style.css" />
+  </head>
+
+  <body>
+    <h1>Online Python Playground</h1>
+    <p>Run simple python script in browser.</p>
+
+    <textarea
+      id="code"
+      autocorrect="off"
+      autocapitalize="off"
+      spellcheck="false"
+      style="height: 40%; width: 95%"
+      autocomplete="off"
+      autofocus
+    >
+print("Hello World!")</textarea
+    >
+    <br />
+    <br />
+    <input type="button" value="Run" id="run" />
+    <div class="loader"></div>
+    <h3 style="display: none">Console outputs:</h3>
+    <p id="result" style="white-space: pre-line"></p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="javascripts/fibonacci.js"></script>
+  </body>
+</html>

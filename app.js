@@ -1,3 +1,4 @@
+const serverless = require("serverless-http");
 var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
@@ -20,3 +21,4 @@ app.use("/", indexRouter);
 app.use("/demo", demoRouter);
 
 module.exports = app;
+module.exports.handler = serverless(app);
